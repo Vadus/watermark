@@ -1,0 +1,11 @@
+<web-app>
+	<servlet>
+		<servlet-name>org.klarblick.document.webservice.RestWebservice
+		</servlet-name>
+	</servlet>
+	
+	<init-param>
+		<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+		<param-value>true</param-value>
+	</init-param>
+</web-app>
