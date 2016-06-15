@@ -30,7 +30,7 @@ c) Provide Unit-Tests to ensure the functionality of the service.
 
 ## Class Diagram
 
-![alt text](https://github.com/Vadus/watermark/tree/master/src/doc/Class_Diagram.png "Class_Diagram.png")
+![Class_Diagram.png](https://raw.githubusercontent.com/Vadus/watermark/master/src/doc/Class_Diagram.png "Class_Diagram.png")
 
 ## Thoughts and remarks on solution
 
