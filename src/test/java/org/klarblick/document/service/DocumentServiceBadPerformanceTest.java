@@ -5,10 +5,19 @@ import org.junit.Before;
 import org.junit.Test;
 import org.klarblick.document.model.Book;
 import org.klarblick.document.model.Document;
+import org.klarblick.document.model.Watermark;
 import org.klarblick.document.watermark.service.Status;
 import org.klarblick.document.watermark.service.Ticket;
 import org.klarblick.document.watermark.service.WatermarkService;
 
+/**
+ * Tests the DocumentService with an underlying WatermarkService, which takes about 100 ms to generate a Watermark.
+ * 
+ * A client has to wait 100 ms until the Watermark is generated. Until then the Status remains PROCESSING.
+ * 
+ * @author DTramnitzke
+ *
+ */
 public class DocumentServiceBadPerformanceTest extends AbstractDocumentServiceTest {
 
 	private DocumentService service = new DocumentService();
@@ -50,14 +59,14 @@ public class DocumentServiceBadPerformanceTest extends AbstractDocumentServiceTe
 	private static class BadPerformanceWatermarkService extends WatermarkService{
 		
 		@Override
-		public void generateWatermark(Document document) {
+		public Watermark generateWatermark(Document document) {
 
 			try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			super.generateWatermark(document);
+			return super.generateWatermark(document);
 		}
 	}
 

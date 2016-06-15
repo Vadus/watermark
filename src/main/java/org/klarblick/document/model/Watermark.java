@@ -4,6 +4,21 @@ import java.io.IOException;
 
 import org.codehaus.jackson.map.ObjectMapper;
 
+/**
+ * <p>
+ * A Watermark constsis of attributes values of a Document.
+ * Usually a document can be identified by its Watermark property. 
+ * This means, that the Watermark class should provide some kind of ID
+ * e.g. a signature or checksum or it should act as an ID itself by 
+ * overriding methods hashcode and equals.
+ * </p>
+ * <p>
+ * However the given exercise does not imply any identification ability of a Watermark
+ * </p>
+ * 
+ * @author DTramnitzke
+ *
+ */
 public class Watermark {
 
 	private String content;
@@ -39,6 +54,7 @@ public class Watermark {
 	
 	@Override
 	public String toString() {
+		//TODO: compare performance of ObjectMapper vs. simple StringBuilder approach
 		try {
 			return new ObjectMapper().writer().writeValueAsString(this);
 		} catch (IOException e) {

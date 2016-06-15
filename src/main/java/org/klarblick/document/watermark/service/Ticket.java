@@ -4,6 +4,12 @@ import java.util.UUID;
 
 import org.klarblick.document.model.Document;
 
+/**
+ * Ticket of a Watermark generation
+ * 
+ * @author DTramnitzke
+ *
+ */
 public class Ticket {
 
 	private String id;

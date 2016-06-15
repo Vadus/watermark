@@ -12,6 +12,15 @@ import org.klarblick.document.model.Book;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
 
+/**
+ * Tests the REST interface. This integration test can be executed via maven:
+ * <p>
+ * mvn clean package verify
+ * </p>
+ * 
+ * @author DTramnitzke
+ *
+ */
 public class WebserviceIT {
 
 	private String lastTicket;

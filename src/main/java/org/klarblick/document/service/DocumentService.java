@@ -1,7 +1,5 @@
 package org.klarblick.document.service;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -11,6 +9,12 @@ import org.klarblick.document.watermark.service.Status;
 import org.klarblick.document.watermark.service.Ticket;
 import org.klarblick.document.watermark.service.WatermarkService;
 
+/**
+ * Document service for generating Watermarks for documents.
+ * 
+ * @author DTramnitzke
+ *
+ */
 public class DocumentService {
 
 	//TODO: use a proper persistence and cache layer ( e.g. JPA implementation )
@@ -57,7 +61,7 @@ public class DocumentService {
 	}
 
 	/**
-	 * @deprecated introduce DI container
+	 * @deprecated TODO introduce DI container
 	 * @param watermarkGenerationService
 	 */
 	void setWatermarkGenerationService(WatermarkService watermarkGenerationService) {
